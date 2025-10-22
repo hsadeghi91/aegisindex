@@ -49,7 +49,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -67,8 +67,8 @@ const Pricing = () => {
               )}
 
               <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground">{plan.description}</p>
+                <h3 className="text-3xl font-bold mb-2">{plan.name}</h3>
+                <p className="text-lg text-muted-foreground">{plan.description}</p>
               </div>
 
               <div className="mb-8">

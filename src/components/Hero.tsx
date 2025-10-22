@@ -20,14 +20,14 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-6xl md:text-8xl font-bold leading-tight">
             بهینه‌سازی هوشمند سایت
             <br />
             <span className="gradient-text">با هوش مصنوعی</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto">
             AegisIndex سایت شما را تحلیل، اصلاح و برای گوگل و ChatGPT ایندکس می‌کند.
           </p>
 
