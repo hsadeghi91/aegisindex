@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Sparkles, Brain } from "lucide-react";
+import { ArrowLeft, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-ai-optimization.jpg";
 
@@ -24,10 +24,7 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="inline-flex items-center gap-3 flex-wrap justify-center lg:justify-start">
-                بهینه‌سازی هوشمند سایت
-                <Brain className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent glow-gold animate-pulse" />
-              </span>
+              بهینه‌سازی هوشمند سایت
               <br />
               <span className="gradient-text">با هوش مصنوعی</span>
             </h1>
