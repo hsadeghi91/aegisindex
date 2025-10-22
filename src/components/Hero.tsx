@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, Sparkles, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -21,7 +21,10 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
-            بهینه‌سازی هوشمند سایت
+            <span className="inline-flex items-center gap-3 sm:gap-4">
+              بهینه‌سازی هوشمند سایت
+              <Brain className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 text-accent glow-gold animate-pulse" />
+            </span>
             <br />
             <span className="gradient-text">با هوش مصنوعی</span>
           </h1>
