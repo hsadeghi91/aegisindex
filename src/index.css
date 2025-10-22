@@ -8,57 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Lighter Navy Background */
-    --background: 220 25% 18%;
-    --foreground: 0 0% 98%;
+    /* Sharp Dark Navy Background */
+    --background: 220 35% 12%;
+    --foreground: 0 0% 100%;
 
-    /* Card with glass effect */
-    --card: 220 20% 25%;
-    --card-foreground: 0 0% 98%;
+    /* Card with sharper glass effect */
+    --card: 220 30% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 25% 15%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 35% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Barcelona Blue */
-    --primary: 207 100% 30%;
+    /* Vibrant Barcelona Blue */
+    --primary: 207 100% 45%;
     --primary-foreground: 0 0% 100%;
     
-    /* Dark Navy Blue */
-    --primary-dark: 233 64% 29%;
+    /* Sharp Dark Navy Blue */
+    --primary-dark: 233 75% 25%;
 
-    /* Lighter secondary */
-    --secondary: 207 50% 20%;
-    --secondary-foreground: 0 0% 98%;
+    /* Sharp secondary */
+    --secondary: 207 65% 25%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 35%;
-    --muted-foreground: 220 10% 70%;
+    --muted: 220 25% 40%;
+    --muted-foreground: 220 15% 75%;
 
-    /* Golden Accent */
-    --accent: 45 69% 53%;
-    --accent-foreground: 220 30% 10%;
+    /* Vibrant Golden Accent */
+    --accent: 45 100% 55%;
+    --accent-foreground: 220 40% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 90% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 35%;
-    --input: 220 20% 30%;
-    --ring: 45 69% 53%;
+    --border: 220 25% 40%;
+    --input: 220 30% 25%;
+    --ring: 45 100% 55%;
 
     --radius: 0.75rem;
     
-    /* Custom Design Tokens */
-    --glow-golden: 45 69% 53%;
-    --glow-blue: 207 100% 50%;
+    /* Custom Design Tokens - Sharper */
+    --glow-golden: 45 100% 55%;
+    --glow-blue: 207 100% 55%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(207 100% 30%), hsl(233 64% 29%));
-    --gradient-accent: linear-gradient(135deg, hsl(207 100% 30%), hsl(45 69% 53%));
-    --gradient-hero: linear-gradient(180deg, hsl(220 25% 18%) 0%, hsl(220 25% 15%) 100%);
+    /* Gradients - More vibrant */
+    --gradient-primary: linear-gradient(135deg, hsl(207 100% 45%), hsl(233 75% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(207 100% 45%), hsl(45 100% 55%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 35% 12%) 0%, hsl(220 35% 8%) 100%);
     
-    /* Shadows with glow - softer */
-    --shadow-glow-gold: 0 0 25px hsla(45, 69%, 53%, 0.15);
-    --shadow-glow-blue: 0 0 25px hsla(207, 100%, 50%, 0.12);
-    --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    /* Shadows with stronger glow */
+    --shadow-glow-gold: 0 0 30px hsla(45, 100%, 55%, 0.25);
+    --shadow-glow-blue: 0 0 30px hsla(207, 100%, 55%, 0.2);
+    --shadow-card: 0 8px 40px hsla(0, 0%, 0%, 0.6);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,38 +90,38 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Estedad', sans-serif;
+    font-family: 'Vazirmatn', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(180deg, hsl(220 25% 18%) 0%, hsl(220 25% 15%) 100%);
+    background: linear-gradient(180deg, hsl(220 35% 12%) 0%, hsl(220 35% 8%) 100%);
     min-height: 100vh;
     font-size: clamp(14px, 1.5vw, 16px);
-    line-height: 1.6;
+    line-height: 1.7;
   }
 }
 
 @layer utilities {
-  /* Glow Effects - Softer */
+  /* Glow Effects - Sharper and Stronger */
   .glow-gold {
-    box-shadow: 0 0 20px hsla(45, 69%, 53%, 0.15);
+    box-shadow: 0 0 30px hsla(45, 100%, 55%, 0.3), 0 0 60px hsla(45, 100%, 55%, 0.15);
   }
   
   .glow-blue {
-    box-shadow: 0 0 20px hsla(207, 100%, 50%, 0.12);
+    box-shadow: 0 0 30px hsla(207, 100%, 55%, 0.25), 0 0 60px hsla(207, 100%, 55%, 0.12);
   }
   
-  /* Glass Effect */
+  /* Glass Effect - Sharper */
   .glass-card {
-    background: hsla(220, 20%, 25%, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsla(220, 15%, 35%, 0.5);
+    background: hsla(220, 30%, 18%, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsla(220, 25%, 40%, 0.6);
   }
   
-  /* Gradient Text */
+  /* Gradient Text - More Vibrant */
   .gradient-text {
-    background: linear-gradient(135deg, hsl(207 100% 50%), hsl(45 69% 53%));
+    background: linear-gradient(135deg, hsl(207 100% 55%), hsl(45 100% 60%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -139,10 +139,10 @@ All colors MUST be HSL.
 
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 15px hsla(45, 69%, 53%, 0.12);
+    box-shadow: 0 0 25px hsla(45, 100%, 55%, 0.25);
   }
   50% {
-    box-shadow: 0 0 25px hsla(45, 69%, 53%, 0.2);
+    box-shadow: 0 0 45px hsla(45, 100%, 55%, 0.4);
   }
 }
 

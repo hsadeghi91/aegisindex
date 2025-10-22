@@ -50,7 +50,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Estedad', 'sans-serif'],
+        sans: ['Vazirmatn', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

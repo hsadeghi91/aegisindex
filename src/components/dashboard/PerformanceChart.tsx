@@ -20,18 +20,18 @@ const PerformanceChart = () => {
           <XAxis 
             dataKey="name" 
             stroke="hsl(var(--muted-foreground))"
-            style={{ fontFamily: 'Estedad', fontSize: '12px' }}
+            style={{ fontFamily: 'Vazirmatn', fontSize: '12px' }}
           />
           <YAxis 
             stroke="hsl(var(--muted-foreground))"
-            style={{ fontFamily: 'Estedad', fontSize: '12px' }}
+            style={{ fontFamily: 'Vazirmatn', fontSize: '12px' }}
           />
           <Tooltip 
             contentStyle={{
               backgroundColor: 'hsl(var(--card))',
               border: '1px solid hsl(var(--border))',
               borderRadius: '12px',
-              fontFamily: 'Estedad',
+              fontFamily: 'Vazirmatn',
               fontSize: '14px'
             }}
           />
