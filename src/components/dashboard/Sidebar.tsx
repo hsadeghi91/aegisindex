@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, FileText, Settings, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "وضعیت سایت", path: "/dashboard" },
@@ -10,6 +12,19 @@ const menuItems = [
 
 const Sidebar = () => {
   const location = useLocation();
+  const { signOut } = useAuth();
+  const { toast } = useToast();
+
+  const handleLogout = async () => {
+    const { error } = await signOut();
+    if (error) {
+      toast({
+        title: "خطا",
+        description: "مشکلی در خروج پیش آمد",
+        variant: "destructive",
+      });
+    }
+  };
 
   return (
     <aside className="w-64 glass-card border-l border-border/50 min-h-screen p-6 flex flex-col">
@@ -40,12 +55,14 @@ const Sidebar = () => {
       </nav>
 
       {/* Logout Button */}
-      <Link to="/">
-        <Button variant="outline" className="w-full justify-start gap-3 border-border/50">
-          <LogOut size={20} />
-          <span>خروج</span>
-        </Button>
-      </Link>
+      <Button 
+        variant="outline" 
+        className="w-full justify-start gap-3 border-border/50"
+        onClick={handleLogout}
+      >
+        <LogOut size={20} />
+        <span>خروج</span>
+      </Button>
     </aside>
   );
 };

@@ -2,10 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { user } = useAuth();
 
   const navItems = [
     { name: "خانه", path: "/" },
@@ -33,11 +35,19 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Link to="/dashboard">
-              <Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                ورود به داشبورد
-              </Button>
-            </Link>
+            {user ? (
+              <Link to="/dashboard">
+                <Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                  داشبورد
+                </Button>
+              </Link>
+            ) : (
+              <Link to="/auth">
+                <Button variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                  ورود / ثبت‌نام
+                </Button>
+              </Link>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,11 +72,19 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Link to="/dashboard" onClick={() => setIsOpen(false)}>
-              <Button variant="default" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                ورود به داشبورد
-              </Button>
-            </Link>
+            {user ? (
+              <Link to="/dashboard" onClick={() => setIsOpen(false)}>
+                <Button variant="default" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                  داشبورد
+                </Button>
+              </Link>
+            ) : (
+              <Link to="/auth" onClick={() => setIsOpen(false)}>
+                <Button variant="default" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                  ورود / ثبت‌نام
+                </Button>
+              </Link>
+            )}
           </div>
         )}
       </div>
