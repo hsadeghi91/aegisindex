@@ -40,10 +40,10 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             پلن‌های <span className="gradient-text">قیمت‌گذاری</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             پلن مناسب خود را انتخاب کنید و رشد سایت را تجربه کنید
           </p>
         </div>
@@ -67,16 +67,16 @@ const Pricing = () => {
               )}
 
               <div className="mb-6">
-                <h3 className="text-3xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-lg text-muted-foreground">{plan.description}</p>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2">{plan.name}</h3>
+                <p className="text-base sm:text-lg text-muted-foreground">{plan.description}</p>
               </div>
 
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold text-accent">{plan.price}</span>
-                  <span className="text-muted-foreground">تومان</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent">{plan.price}</span>
+                  <span className="text-sm sm:text-base text-muted-foreground">تومان</span>
                 </div>
-                <div className="text-muted-foreground mt-1">{plan.period}</div>
+                <div className="text-sm sm:text-base text-muted-foreground mt-1">{plan.period}</div>
               </div>
 
               <ul className="space-y-4 mb-8">
@@ -85,7 +85,7 @@ const Pricing = () => {
                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="text-accent" size={14} />
                     </div>
-                    <span className="text-foreground/90">{feature}</span>
+                    <span className="text-sm sm:text-base text-foreground/90">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -107,7 +107,7 @@ const Pricing = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             تمامی پلن‌ها شامل ۷ روز ضمانت بازگشت وجه می‌باشند
           </p>
         </div>

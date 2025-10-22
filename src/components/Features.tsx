@@ -29,10 +29,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             ویژگی‌های <span className="gradient-text">منحصر به فرد</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             همه چیز برای بهینه‌سازی و رشد سایت شما
           </p>
         </div>
@@ -48,16 +48,16 @@ const Features = () => {
               <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                 <feature.icon className="text-accent" size={28} />
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-foreground">{feature.title}</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-foreground">{feature.title}</h3>
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
-          <div className="glass-card inline-block px-8 py-4 rounded-full">
-            <p className="text-accent font-semibold">
+          <div className="glass-card inline-block px-6 sm:px-8 py-4 rounded-full">
+            <p className="text-sm sm:text-base text-accent font-semibold">
               ✨ تمامی ویژگی‌ها با هوش مصنوعی پیشرفته قدرت گرفته‌اند
             </p>
           </div>

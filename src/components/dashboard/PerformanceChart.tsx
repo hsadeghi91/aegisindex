@@ -12,26 +12,27 @@ const data = [
 
 const PerformanceChart = () => {
   return (
-    <div className="glass-card p-6 rounded-2xl">
-      <h3 className="text-xl font-bold mb-6">روند پیشرفت هفتگی</h3>
+    <div className="glass-card p-4 sm:p-6 rounded-2xl">
+      <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">روند پیشرفت هفتگی</h3>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
           <XAxis 
             dataKey="name" 
             stroke="hsl(var(--muted-foreground))"
-            style={{ fontFamily: 'Vazirmatn' }}
+            style={{ fontFamily: 'Estedad', fontSize: '12px' }}
           />
           <YAxis 
             stroke="hsl(var(--muted-foreground))"
-            style={{ fontFamily: 'Vazirmatn' }}
+            style={{ fontFamily: 'Estedad', fontSize: '12px' }}
           />
           <Tooltip 
             contentStyle={{
               backgroundColor: 'hsl(var(--card))',
               border: '1px solid hsl(var(--border))',
               borderRadius: '12px',
-              fontFamily: 'Vazirmatn'
+              fontFamily: 'Estedad',
+              fontSize: '14px'
             }}
           />
           <Line 

@@ -3,18 +3,26 @@ import StatusCard from "@/components/dashboard/StatusCard";
 import PerformanceChart from "@/components/dashboard/PerformanceChart";
 import RecentAnalysis from "@/components/dashboard/RecentAnalysis";
 import { Activity, TrendingUp, Zap, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="flex min-h-screen w-full">
+    <div className="flex min-h-screen w-full flex-col md:flex-row">
       <Sidebar />
       
-      <main className="flex-1 p-8">
+      {/* Mobile Header */}
+      <div className="md:hidden glass-card border-b border-border/50 p-4">
+        <Link to="/">
+          <div className="text-xl font-bold gradient-text">AegisIndex</div>
+        </Link>
+      </div>
+      
+      <main className="flex-1 p-4 sm:p-6 md:p-8">
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Header */}
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold">داشبورد</h1>
-            <p className="text-muted-foreground">خلاصه وضعیت و عملکرد سایت شما</p>
+            <h1 className="text-2xl sm:text-3xl font-bold">داشبورد</h1>
+            <p className="text-sm sm:text-base text-muted-foreground">خلاصه وضعیت و عملکرد سایت شما</p>
           </div>
 
           {/* Status Cards */}

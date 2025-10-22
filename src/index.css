@@ -90,14 +90,15 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: 'Estedad', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
     background: linear-gradient(180deg, hsl(220 25% 18%) 0%, hsl(220 25% 15%) 100%);
     min-height: 100vh;
-    font-size: 17px;
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 1.6;
   }
 }
 

@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="text-2xl font-bold gradient-text">AegisIndex</div>
+            <div className="text-xl sm:text-2xl font-bold gradient-text">AegisIndex</div>
           </Link>
 
           {/* Desktop Menu */}

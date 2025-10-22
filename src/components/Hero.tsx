@@ -14,20 +14,20 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-accent/30 text-accent">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full glass-card border border-accent/30 text-accent">
             <Sparkles size={16} />
-            <span className="text-sm font-medium">قدرت هوش مصنوعی برای سایت شما</span>
+            <span className="text-xs sm:text-sm font-medium">قدرت هوش مصنوعی برای سایت شما</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
             بهینه‌سازی هوشمند سایت
             <br />
             <span className="gradient-text">با هوش مصنوعی</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-2xl md:text-3xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             AegisIndex سایت شما را تحلیل، اصلاح و برای گوگل و ChatGPT ایندکس می‌کند.
           </p>
 
@@ -36,7 +36,7 @@ const Hero = () => {
             <Link to="/dashboard">
               <Button 
                 size="lg" 
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-8 py-6 glow-gold hover-scale group"
+                className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 glow-gold hover-scale group"
               >
                 شروع کنید
                 <ArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" size={20} />
@@ -45,25 +45,25 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary/50 text-foreground hover:bg-primary/10 font-semibold text-lg px-8 py-6"
+              className="w-full sm:w-auto border-primary/50 text-foreground hover:bg-primary/10 font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
             >
               مشاهده نمونه‌کار
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-12 max-w-2xl mx-auto">
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">۹۸٪</div>
-              <div className="text-sm text-muted-foreground">بهبود سئو</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">۹۸٪</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">بهبود سئو</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">۲۴/۷</div>
-              <div className="text-sm text-muted-foreground">نظارت مداوم</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">۲۴/۷</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">نظارت مداوم</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">۱۰۰+</div>
-              <div className="text-sm text-muted-foreground">مشتری راضی</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">۱۰۰+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">مشتری راضی</div>
             </div>
           </div>
         </div>

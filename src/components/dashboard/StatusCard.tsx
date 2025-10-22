@@ -22,8 +22,8 @@ const StatusCard = ({ title, value, icon: Icon, trend, trendUp }: StatusCardProp
         )}
       </div>
       <div className="space-y-1">
-        <div className="text-3xl font-bold text-foreground">{value}</div>
-        <div className="text-sm text-muted-foreground">{title}</div>
+        <div className="text-2xl sm:text-3xl font-bold text-foreground">{value}</div>
+        <div className="text-xs sm:text-sm text-muted-foreground">{title}</div>
       </div>
     </div>
   );

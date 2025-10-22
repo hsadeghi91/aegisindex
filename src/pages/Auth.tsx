@@ -139,11 +139,11 @@ const Auth = () => {
           {/* Header */}
           <div className="text-center space-y-2">
             <Link to="/" className="inline-block">
-              <div className="text-3xl font-bold gradient-text mb-2">AegisIndex</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">AegisIndex</div>
             </Link>
             <div className="flex items-center justify-center gap-2 text-accent">
               <Sparkles size={16} />
-              <span className="text-sm">بهینه‌سازی هوشمند با هوش مصنوعی</span>
+              <span className="text-xs sm:text-sm">بهینه‌سازی هوشمند با هوش مصنوعی</span>
             </div>
           </div>
 
@@ -152,7 +152,7 @@ const Auth = () => {
             <button
               type="button"
               onClick={() => setIsSignUp(false)}
-              className={`flex-1 py-2 px-4 rounded-lg font-semibold transition-all ${
+              className={`flex-1 py-2 px-3 sm:px-4 rounded-lg font-semibold transition-all text-sm sm:text-base ${
                 !isSignUp
                   ? "bg-accent text-accent-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -163,7 +163,7 @@ const Auth = () => {
             <button
               type="button"
               onClick={() => setIsSignUp(true)}
-              className={`flex-1 py-2 px-4 rounded-lg font-semibold transition-all ${
+              className={`flex-1 py-2 px-3 sm:px-4 rounded-lg font-semibold transition-all text-sm sm:text-base ${
                 isSignUp
                   ? "bg-accent text-accent-foreground"
                   : "text-muted-foreground hover:text-foreground"
@@ -216,7 +216,7 @@ const Auth = () => {
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 className="bg-muted/50 border-border/50"
-                placeholder="حداقل ۶ کاراکتر"
+                placeholder="حداقل ۱۲ کاراکتر"
                 dir="ltr"
               />
               {errors.password && (
@@ -226,7 +226,7 @@ const Auth = () => {
 
             <Button
               type="submit"
-              className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg py-6 glow-gold group"
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-base sm:text-lg py-5 sm:py-6 glow-gold group"
               disabled={isSubmitting}
             >
               {isSubmitting ? (

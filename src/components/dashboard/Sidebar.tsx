@@ -27,10 +27,10 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="w-64 glass-card border-l border-border/50 min-h-screen p-6 flex flex-col">
+    <aside className="hidden md:flex w-64 glass-card border-l border-border/50 min-h-screen p-6 flex-col">
       {/* Logo */}
       <Link to="/" className="mb-8">
-        <div className="text-2xl font-bold gradient-text">AegisIndex</div>
+        <div className="text-xl sm:text-2xl font-bold gradient-text">AegisIndex</div>
       </Link>
 
       {/* Menu Items */}
@@ -47,7 +47,7 @@ const Sidebar = () => {
                 }`}
               >
                 <item.icon size={20} />
-                <span className="font-medium">{item.label}</span>
+                <span className="text-sm font-medium">{item.label}</span>
               </div>
             </Link>
           );
@@ -57,7 +57,7 @@ const Sidebar = () => {
       {/* Logout Button */}
       <Button 
         variant="outline" 
-        className="w-full justify-start gap-3 border-border/50"
+        className="w-full justify-start gap-3 border-border/50 text-sm"
         onClick={handleLogout}
       >
         <LogOut size={20} />
